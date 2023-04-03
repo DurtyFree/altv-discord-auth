@@ -51,9 +51,9 @@ if (process.env['ENABLE_WHITELIST'] && process.env['ENABLE_WHITELIST'] !== 'fals
     }
 
     console.log(`[Discord-Auth] Whitelist is ENABLED.`);
-    import('./bot');
-    import('./verify');
-    import('./express');
+    import('./bot.js');
+    import('./verify.js');
+    import('./express.js');
 } else {
     if (!process.env['CLIENT_ID']) {
         console.error(`[Discord-Auth] CLIENT_ID does not have a value in the '.env' file. Add the value then restart your server.`);
@@ -73,6 +73,6 @@ if (process.env['ENABLE_WHITELIST'] && process.env['ENABLE_WHITELIST'] !== 'fals
     }
 
     console.log(`[Discord-Auth] Whitelist is NOT ENABLED. Starting in Discord Auth Only mode.`);
-    import('./verify');
-    import('./express');
+    import('./verify.js');
+    import('./express.js');
 }

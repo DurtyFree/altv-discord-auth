@@ -4,7 +4,7 @@ import axios from 'axios';
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
-import { isWhitelistOn, isWhitelisted } from './bot';
+import { isWhitelistOn, isWhitelisted } from './bot.js';
 
 const htmlPath = path.join(alt.Resource.current.path, 'server/html');
 const stylesPath = path.join(alt.Resource.current.path, 'server/html/styles');
